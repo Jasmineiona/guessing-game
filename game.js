@@ -1,40 +1,52 @@
-var question1 = prompt("Was it easy to get to Code Fellows today?");
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
+var num = 0
 
-if (question1.toUpperCase() === 'YES') {
-	alert('Lucky you');
-} else {
-	alert('Sucks to be you');
+
+function quest1 (){
+	var question1 = prompt("Was it easy to get to Code Fellows today?");
+
+	if (question1.toUpperCase() === 'YES' || question1.toUpperCase() === 'Y' ) {
+		one.innerHTML = 'Lucky you';
+		num++;
+	} else {
+		one.innerHTML = 'Sucks to be you';
+	}
 }
 
-var question2 = prompt("Where are you communting from?");
 
-if (question2.toUpperCase() === 'Tacoma') {
-	alert('That is it');
-} else {
-	alert('Nope');
+function quest2 (){
+	var question2 = prompt("Where are you communting from?");
+
+	if (question2.toUpperCase() === 'TACOMA' || question2.toUpperCase() === 'OLYMPIA') {
+		two.innerHTML = 'That is it';
+		num++;
+	} else if (question2.toUpperCase() === 'EVERETT'){
+		two.innerHTML = 'Wrong Direction';
+	} else {
+		two.innerHTML = 'Nope'
+	}
 }
 
-var question3 = prompt("Did you make it to class on time?");
+function quest3 (){
+	var question3 = prompt("Did you make it to class on time?");
 
-if (question3.toUpperCase() === 'YES') {
-	alert('Good Job');
-} else {
-	alert('Better luck tomorrow');
+	if (question3.toUpperCase() === 'YES' || question3.toUpperCase() === 'Y') {
+		three.innerHTML = 'Good Job';
+		num++;
+	} else {
+		three.innerHTML = 'Better luck tomorrow';
+	}
 }
 
-console.log('Exactly what the user entered: ' + question1);
-console.log('What I am testing in my "if" condition: ' + question1.toUpperCase(
-	));
+quest1();
+quest2();
+quest3();
 
-console.log('Exactly what the user entered: ' + question2);
-console.log('What I am testing in my "if" condition: ' + question2.toUpperCase(
-	));
-
-console.log('Exactly what the user entered: ' + question3);
-console.log('What I am testing in my "if" condition: ' + question3.toUpperCase(
-	));
+alert('RESULTS: You got ' + num + ' out of 3 right'); 
 
 
-// here are some changes...
+
 
 
