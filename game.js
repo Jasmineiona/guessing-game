@@ -1,6 +1,9 @@
 var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
+var picOne = document.getElementById('picOne');
+var picTwo = document.getElementById('picTwo');
+var picThree = document.getElementById('picThree');
 var num = 0
 var questions = ['Was it easy to get to Code Fellows today?',
 									'Where are you communting from?',
@@ -12,6 +15,7 @@ function quest1 (){
 	if (question1.toUpperCase() === 'YES' || question1.toUpperCase() === 'Y' ) {
 		one.innerHTML = 'Lucky you';
 		num++;
+		picOne.innerHTML = '<img src="img/cairotaxi2.jpg" width = "200" />';
 	} else {
 		one.innerHTML = 'Sucks to be you';
 	}
@@ -24,6 +28,7 @@ function quest2 (){
 	if (question2.toUpperCase() === 'TACOMA' || question2.toUpperCase() === 'OLYMPIA') {
 		two.innerHTML = 'That is it';
 		num++;
+		picTwo.innerHTML = '<img src="img/african-lion-kruger-national-park-south-africa_160.jpg" width = "200" />';
 	} else if (question2.toUpperCase() === 'EVERETT'){
 		two.innerHTML = 'Wrong Direction';
 	} else {
@@ -37,6 +42,8 @@ function quest3 (){
 	if (question3.toUpperCase() === 'YES' || question3.toUpperCase() === 'Y') {
 		three.innerHTML = 'Good Job';
 		num++;
+		picThree.innerHTML = '<img src="img/art-teacher_160.jpg" width = "200" />';
+
 	} else {
 		three.innerHTML = 'Better luck tomorrow';
 	}
